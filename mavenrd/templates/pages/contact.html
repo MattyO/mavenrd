@@ -1,0 +1,33 @@
+{% extends 'layout.html' %}
+{% block content %}
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <h1>Contact</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      {% if messages %}
+        {% for message in messages %}
+        <p {% if message.tags %}  class="bg-{{message.tags}}" {% endif %}>
+          {{ message }}
+        </p>
+        {% endfor %}
+      {% endif %}
+      <form method="POST" role="form"> {% csrf_token %}
+        {% for field in contact_form %}
+        <div class="form-group {% if field.errors %}has-error{%endif%}">
+          {{ field.label_tag }}
+          {% for error in field.errors %}
+          <br/>
+          <label class="control-label control-label-error" for="id_{{field.name}}">{{error}}</label>
+          {% endfor %}
+          {{field}}
+        </div>
+        {% endfor %}
+        <button type="submit" class="btn btn-lg btn-primary">Submit</button>
+      </form>
+    </div>
+  </div>
+
+{% endblock %}

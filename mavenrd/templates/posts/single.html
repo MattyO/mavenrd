@@ -1,0 +1,12 @@
+{% extends 'layout.html' %}
+{% block content %}
+
+    <div class="col-md-8 col-md-offset-2">
+      <h1> {{post.title}} </h1>
+      {{post.content | safe}}
+    </div>
+  </div>
+<script type="text/javascript"> 
+ $('pre').addClass("prettyprint")
+</script> 
+{% endblock %}

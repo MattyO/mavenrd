@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+{% block content %}
+  <div class="row"> 
+    <div class="col-md-12">
+      <div id="galleria"> </div>
+      <script type="text/javascript">
+        Galleria.run('#galleria', { dataSource: '.stuff' });
+
+      </script>
+    </div>
+  </div>
+  <div class="row"> 
+    <div class="col-md-12 stuff"> 
+      <h1> {{ media.filename }} </h1>
+      <img src="{{media.file.url}}"/> 
+    </div>
+  </div>
+{% endblock %}

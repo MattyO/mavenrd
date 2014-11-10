@@ -1,0 +1,105 @@
+body{
+	margin-top: 65px;
+	font-family: "Open Sans";
+	font-size: 16px;
+	color: #404040;
+}
+
+
+h1, h2, h3, h4, h5{
+	font-family: Montserrat;
+}
+
+h1 {
+   font-size: 52px;
+   margin: 0px 0px 15px 0px;
+}
+
+.title h1 {
+	float: left;
+   display: inline-block;
+}
+
+.title h2 {
+   float: left;
+   font-size: 25px;
+   display: inline-block;
+}
+
+h2 {
+   font-size: 36px;
+   line-height: 46px;
+   margin: 0px 0px 25px 0px;
+}
+
+h3{
+   font-size: 28px;
+}
+
+h4 {
+   margin-bottom: 25px;
+}
+
+p {
+   margin: 0px 0px 25px 0px;
+   text-transform: inherit;
+   font-size: 16px;
+}
+
+.nav > li > a:hover  {
+  background-color: white;
+  text-decoration: underline;
+
+}
+
+
+.posts  .created-at{
+	font-size:.7em;
+	text-align: right;
+	color: gray;
+	padding: 2px 0px 5px 0px;
+}
+
+.posts{
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+	font-size: 1.2em;
+}
+
+.posts li{
+	padding-top: 25px;
+	border-bottom: 1px solid gray
+}
+
+pre {
+	overflow: auto;
+	word-wrap: normal;
+	white-space: pre;
+	margin-bottom: 25px;
+}
+
+.footer{
+	margin-top: 50px;
+	color: #B8B8B8;
+	text-align: center;
+}
+
+.footer p{
+	text-transform: uppercase;
+	font-size: .7em;
+	letter-spacing: .4em;
+}
+.navbar-default {
+	background-color:white;
+	background-color: rgba(255,255,255,0.9);
+	border-bottom: 1px solid #F0F0F0 ;
+}
+label.control-label-error {
+	font-weight: normal;
+}
+
+.clear {
+	clear: both;
+
+}

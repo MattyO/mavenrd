@@ -1,0 +1,28 @@
+{% extends 'layout.html' %}
+{% block content %}
+  <div class="row"> 
+    <div class="col-md-12">
+      <div id="galleria"> </div>
+      <script type="text/javascript">
+        $(document).ready(function(){
+          {% load staticfiles %}
+            
+          Galleria.loadTheme('{% static "vendor/galleria/themes/classic/galleria.classic.min.js" %}');
+          Galleria.run('#gallery');
+          //, {dataSource: "#images",  keepSource: true}
+        });
+      </script>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <h1> {{ collection.name }} </h1>
+      <div id="gallery" style="height: 400px;">
+        {% for media in collection.media.all %}
+          <img  class="img-thumbnail" src="{{media.file.url}}" />
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+{% endblock %}
