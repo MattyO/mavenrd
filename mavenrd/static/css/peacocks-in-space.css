@@ -1,0 +1,48 @@
+pre {
+  background-color: #2b303b;
+  padding: 2em;
+  font-size:.7em;
+  color: #dee3ec;
+}
+pre code {
+  font-family: 'Source Code Pro', Monaco, Consolas, "Lucida Console", monospace;
+}
+pre .pln {
+  color: #dee3ec;
+}
+pre .str {
+  color: #BCD42A;
+}
+pre .kwd {
+  color: #26A6A6;
+}
+pre .com {
+  color: #6e7a94;
+}
+pre .typ {
+  color: #FF5D38;
+}
+pre .lit {
+  color: #BCD42A;
+}
+pre .pun,
+pre .opn,
+pre .clo {
+  color: #dee3ec;
+}
+pre .tag {
+  color: #26A6A6;
+}
+pre .atn {
+  color: #FF5D38;
+}
+pre .atv {
+  color: #BCD42A;
+}
+pre .dec,
+pre .var {
+  color: #BCD42A;
+}
+pre .fun {
+  color: #26A6A6;
+}
