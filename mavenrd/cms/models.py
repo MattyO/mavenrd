@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from mavenrd import settings
+import datetime
 
 # Create your models here.
 class Page(models.Model):
@@ -9,7 +10,7 @@ class Page(models.Model):
     content = models.TextField()
     slug = models.SlugField(unique=True)
     active = models.BooleanField(default=False)
-    created_at = models.DateTimeField(auto_now_add=True)
+    created_at = models.DateTimeField(default=datetime.datetime.now)
     template = models.CharField(max_length=200, blank=True, null=True)
 
     def __str__(self):
