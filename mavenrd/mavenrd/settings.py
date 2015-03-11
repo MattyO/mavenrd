@@ -103,3 +103,5 @@ EMAIL_HOST=os.environ.get('EMAIL_HOST',"smtp.mailgun.org")
 EMAIL_PORT=os.environ.get('EMAIL_PORT',587)
 EMAIL_HOST=os.environ.get('EMAIL_HOST_USER',"**********************")
 EMAIL_HOST=os.environ.get('EMAIL_HOST_PASSWORD',"*************")
+
+TRACKING_WIDGET=os.environ.get("TRACKING_WIDGET","")

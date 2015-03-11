@@ -23,8 +23,13 @@ def get_page_data(name):
     return None
 
 def update_page_data(page_name, page_context):
+    global_page_data = get_page_data('global_data')
     new_page_data = get_page_data(page_name)
-    if new_page_data is not None: 
+
+    if global_page_data is not None:
+        page_context.update(global_page_data)
+
+    if new_page_data is not None:
         page_context.update(new_page_data)
     return page_context
 
@@ -69,8 +74,8 @@ def media(request, id):
 @csrf_exempt
 def upload(request):
     def post():
-        uploaded = UploadedMedia.objects.create( 
-                filename = "NA", 
+        uploaded = UploadedMedia.objects.create(
+                filename = "NA",
                 file = request.FILES['file'])
 
         return jsonify({"filename": uploaded.file.name, "filelink": uploaded.file.url})
